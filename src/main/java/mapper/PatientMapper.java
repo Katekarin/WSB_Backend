@@ -2,7 +2,7 @@ package mapper;
 
 import pl.wsb.to.PatientTo;
 import pl.wsb.to.VisitTo;
-import com.medi.model.Patient; // zakładam, że encje masz w pakiecie model
+import com.medi.model.Patient;
 import mapper.VisitMapper;
 
 import java.util.List;

@@ -1,11 +1,9 @@
 package mapper;
 
-import pl.wsb.to.PatientTo;
 import pl.wsb.to.VisitTo;
 import com.medi.model.Visit;
 import java.util.stream.Collectors;
 import java.util.List;
-import com.medi.model.Doctor;
 
 public class VisitMapper {
 

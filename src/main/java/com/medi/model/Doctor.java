@@ -41,13 +41,10 @@ public class Doctor {
         this.address = address;
     }
 
-    // Jednostronna relacja od strony właściciela (Doctor posiada Address)
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id", nullable = false)
     private Address address;
 
-    // Gettery, settery, konstruktor
     public Doctor() {}
 
-    // Gettery/settery pomińmy tutaj dla czytelności, ale oczywiście je dodaj
 }
