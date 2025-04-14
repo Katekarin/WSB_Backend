@@ -15,17 +15,14 @@ public class Visit {
     private String description;
     private LocalDateTime time;
 
-    // Dwustronna relacja z Patient (Visit -> Patient)
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
-    // Dwustronna relacja z Doctor (Visit -> Doctor)
     @ManyToOne
     @JoinColumn(name = "doctor_id", nullable = false)
     private Doctor doctor;
 
-    // Jednostronna relacja z MedicalTreatment (Visit -> MedicalTreatment)
     @ManyToOne
     @JoinColumn(name = "medical_treatment_id", nullable = false)
     private MedicalTreatment medicalTreatment;
@@ -56,5 +53,4 @@ public class Visit {
 
     public Visit() {}
 
-    // Gettery/settery
 }

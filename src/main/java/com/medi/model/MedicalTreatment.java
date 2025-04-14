@@ -23,5 +23,4 @@ public class MedicalTreatment {
 
     public MedicalTreatment() {}
 
-    // Gettery/settery
 }

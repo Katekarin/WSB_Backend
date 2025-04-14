@@ -16,10 +16,9 @@ public class PatientMapper {
         to.setLastName(entity.getLastName());
         to.setBirthDate(entity.getBirthDate());
 
-        // Przykład dodatkowego pola innego niż String (np. boolean isInsured)
         to.setInsured(entity.isInsured());
 
-        List<VisitTO> visits = entity.getVisits().stream()
+        List<VisitTo> visits = entity.getVisits().stream()
                 .map(VisitMapper::toTO)
                 .collect(Collectors.toList());
         to.setVisits(visits);
@@ -27,17 +26,15 @@ public class PatientMapper {
         return to;
     }
 
-    public static Patient fromTO(PatientTO to) {
+    public static Patient fromTO(PatientTo to) {
         Patient entity = new Patient();
         entity.setId(to.getId());
         entity.setFirstName(to.getFirstName());
         entity.setLastName(to.getLastName());
         entity.setBirthDate(to.getBirthDate());
 
-        // Dodatkowe pole
         entity.setInsured(to.isInsured());
 
-        // UWAGA: zazwyczaj wizyty nie są odwzorowywane tutaj, tylko przy osobnym mapowaniu!
         return entity;
     }
 }
