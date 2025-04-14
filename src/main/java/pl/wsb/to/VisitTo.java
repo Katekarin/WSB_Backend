@@ -1,6 +1,6 @@
 package pl.wsb.to;
 
-public class VisitTO {
+public class VisitTo {
     private LocalDateTime date;
     private String doctorFirstName;
     private String doctorLastName;

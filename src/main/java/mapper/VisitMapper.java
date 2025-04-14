@@ -1,8 +1,8 @@
 package mapper;
 
-public class PatientMapper {
-    public static PatientTO toTO(PatientEntity entity) {
-        PatientTO to = new PatientTO();
+public class VisitMapper {
+    public static VisitTO toTO(Visit entity) {
+        VisitTO to = new VisitTO();
         to.setId(entity.getId());
         to.setFirstName(entity.getFirstName());
         to.setLastName(entity.getLastName());

@@ -19,7 +19,6 @@ public class Patient {
     private String patientNumber;
     private LocalDate dateOfBirth;
 
-    // Jednostronna relacja od strony właściciela
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", referencedColumnName = "id", nullable = false)
     private Address address;
@@ -42,5 +41,4 @@ public class Patient {
 
     public Patient() {}
 
-    // Gettery/settery
 }

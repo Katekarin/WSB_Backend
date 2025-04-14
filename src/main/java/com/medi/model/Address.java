@@ -26,5 +26,4 @@ public class Address {
 
     public Address() {}
 
-    // Gettery/settery
 }
