@@ -1,4 +1,4 @@
-package com.jpacourse.dto;
+package JPAcourse.dto;
 
 import JPAcourse.persistence.enums.Gender;
 
