@@ -23,5 +23,12 @@ public interface PatientDao extends JpaRepository<Patient, Long> {
                   @Param("doctorId") Long doctorId,
                   @Param("date") LocalDateTime date,
                   @Param("description") String description);
+
+    List<PatientEntity> findBySurname(String surname);
+
+    List<PatientEntity> findPatientsWithVisits(int minimal = 0);
+
+    List<PatientEntity> findPatientsOlderThen(int year, int month, int day);
+    List<PatientEntity> findPatientsOlderThen(LocalDateTime date);
 }
 

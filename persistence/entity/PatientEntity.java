@@ -40,6 +40,8 @@ public class PatientEntity {
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "PATIENT_ID")
+	@Fetch(FetchMode.SELECT)
+	//@Fetch(FetchMode.JOIN)
 	private List<VisitEntity> visits;
 
 	@OneToOne(cascade = CascadeType.ALL)
